@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Player UI</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            font-family: Arial, sans-serif;
+        }
+
+        .player {
+            width: 300px;
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .album-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 10px auto;
+            background: url("https://picsum.photos/200") no-repeat center;
+            background-size: cover;
+            transition: transform 0.5s;
+        }
+
+        .album-img:hover {
+            transform: rotate(20deg);
+        }
+
+        h3 {
+            margin: 10px 0 5px;
+        }
+
+        p {
+            margin: 0;
+            color: gray;
+            font-size: 14px;
+        }
+
+        .progress-container {
+            background: #ddd;
+            border-radius: 10px;
+            height: 6px;
+            margin: 20px 0;
+            cursor: pointer;
+        }
+
+        .progress {
+            background: #667eea;
+            height: 100%;
+            width: 60%;
+            border-radius: 10px;
+            transition: width 0.3s;
+        }
+
+        .progress-container:hover .progress {
+            width: 80%;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            background: #764ba2;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #667eea;
+            transform: scale(1.2);
+        }
+
+        .play {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="player">
+        <div class="album-img"></div>
+        <h3>Perfect</h3>
+        <p>Ed Sheeran</p>
+
+        <div class="progress-container">
+            <div class="progress"></div>
+        </div>
+
+        <div class="controls">
+            <button class="btn">⏮</button>
+            <button class="btn play">▶</button>
+            <button class="btn">⏭</button>
+        </div>
+    </div>
+
+</body>
+</html>
